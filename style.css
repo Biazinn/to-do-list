@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    place-items: center;
+    display: grid;
+    background-color: beige;
+}
+
+section {
+    margin-top: 10px;
+    line-height: 30px;
+    place-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    color: antiquewhite;
+    background: black;
+}
+
+h1 {
+    text-align: center;
+    place-items: center;
+    width: 150px;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: bisque;
+    background: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+input {
+    border-radius: 20px;
+}
+
+li {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 50px;
+   transform: translateX(-30px);
+}
+
+button {
+    
+}
+
+.heart-btn {
+    transform: rotateZ(-45deg);
+    position: flex;
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  
+  .heart-btn::before,
+  .heart-btn::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .heart-btn::before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart-btn::after {
+    top: 0;
+    left: 25px;
+  }
+  
+  .heart-btn {
+    scale: 0.6;
+  }
+
+  .heart-btn span {
+    font-family: 'Times New Roman', Times, serif;
+font-size: 15px;
+   scale: 1.8;
+    transform: translateX(5px);
+    text-align: center;
+    z-index: 1;
+    display: inline-block;
+    font-weight: bold;
+  }
