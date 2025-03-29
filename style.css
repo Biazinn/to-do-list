@@ -96,3 +96,54 @@ font-size: 15px;
     display: inline-block;
     font-weight: bold;
   }
+
+  .Heart {
+    transform: rotateZ(-45deg);
+    position: flex;
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  
+  .Heart::before,
+  .Heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  .Heart::before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .Heart::after {
+    top: 0;
+    left: 25px;
+  }
+  
+  .Heart {
+    scale: 0.6;
+  }
+
+  .Heart span {
+    font-family: 'Times New Roman', Times, serif;
+font-size: 15px;
+   scale: 1.8;
+    transform: translateX(5px);
+    text-align: center;
+    z-index: 1;
+    display: inline-block;
+    font-weight: bold;
+  }

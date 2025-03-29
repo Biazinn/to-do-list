@@ -9,10 +9,15 @@
 <body>
     <h1>Tarefas</h1>
     <section>
+        <p>Pressione "save" antes de "new" para salvar tarefa.</p>
         <ul>
         </ul>
-        <input>
+        <input type="text" id="Tarefa">
         <button class="heart-btn" onclick="add()"><span>New</span></button>
+        <button class="Heart" onclick="salvartarefa()"><span>save</span></button>
+        <div>
+            <p id="mensagem"></p>
+        </div>
     </section>
         <script src="script.js"></script>
 </body>

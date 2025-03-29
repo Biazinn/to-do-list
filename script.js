@@ -1,5 +1,5 @@
 //estado da aplicação
-const tarefas = ['coisa 1', 'coisa 2']
+const tarefas = ["Estudar Js"]
 
 function add() {
     const input = document.querySelector("input")
@@ -21,3 +21,23 @@ function render() {
     
 }
 render()
+
+function salvartarefa() {
+    let todo = document.getElementById('Tarefa').value
+    localStorage.setItem('To do', todo)
+    exibirmsg('Tarefa salva!')
+}
+function exibirmsg(mensagem) {
+    let pMsg = document.getElementById('mensagem')
+    pMsg.textContent = mensagem
+}
+
+window.onload = function () {
+    let tarefasalva = localStorage.getItem('To do')
+    if (tarefasalva) {
+        exibirmsg(`ja fez sua ultima tarefa salva: ${tarefasalva}?`)
+        
+    } else {
+        exibirmsg(`Salve sua tarefa`)
+    }
+}
