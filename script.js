@@ -9,13 +9,14 @@ const parsedArr = JSON.parse(str)
 console.log(parsedArr)
 
 function render() {
-    const ul = document.querySelector("ul")
-    ul.innerHTML = null
+    const ul = document.getElementById('lista')
+    ul.innerHTML = "";
 
     tarefas.forEach(function (tarefa){
         const li = document.createElement("li")
-        li.textContent = tarefa
+        li.innerText = tarefa
         ul.appendChild(li)
+    
     })
     
 }
@@ -38,7 +39,9 @@ function exibirmsg(mensagem) {
     pMsg.textContent = mensagem
 }
 
-window.onload = function () {
+
+
+window.onload = function() {
     let tarefasalva = localStorage.getItem('To do')
     if (tarefasalva) {
         exibirmsg(`ja fez sua ultima tarefa salva: ${tarefasalva}?`)
@@ -47,3 +50,4 @@ window.onload = function () {
         exibirmsg(`Salve sua tarefa`)
     }
 }
+console.log(tarefas)
