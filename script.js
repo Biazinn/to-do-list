@@ -1,13 +1,12 @@
 //estado da aplicação
 const tarefas = ["Estudar Js"]
-
-function add() {
-    const input = document.querySelector("input")
-    const tarefa = input.value
-    tarefas.push(tarefa)
-    input.value = ""
-    render()
-}
+const jsonArr = JSON.stringify(tarefas)
+console.log(jsonArr)
+localStorage.setItem("kArr", jsonArr)
+const str = localStorage.getItem("kArr")
+console.log(str)
+const parsedArr = JSON.parse(str)
+console.log(parsedArr)
 
 function render() {
     const ul = document.querySelector("ul")
@@ -15,10 +14,17 @@ function render() {
 
     tarefas.forEach(function (tarefa){
         const li = document.createElement("li")
-        li.innerText = tarefa
+        li.textContent = tarefa
         ul.appendChild(li)
     })
     
+}
+function add() {
+    const input = document.querySelector("input")
+    const tarefa = input.value
+    tarefas.push(tarefa)
+    input.value = ""
+    render()
 }
 render()
 
